@@ -2,18 +2,22 @@ import { Link, routes } from '@redwoodjs/router'
 
 const BlogLayout = ({ children }) => {
   return (
-  <>
-  {children}
-
-  <p>
-        My default route is named <code>home</code>, link to me with `
-        <Link to={routes.home()}>Home</Link>`
-      </p>
-  <p>
-        My default route is named <code>about</code>, link to me with `
-        <Link to={routes.about()}>About</Link>`
-      </p>
-  </>)
+    <>
+      <h1>RedWood Blog</h1>
+      <ul>
+        <li>
+          <Link to={routes.home()}>Home</Link>
+        </li>
+        <li>
+          <Link to={routes.about()}>About</Link>
+        </li>
+        <li>
+          <Link to={routes.posts()}>Manage Posts</Link>
+        </li>
+      </ul>
+      {children}
+    </>
+  )
 }
 
 export default BlogLayout
